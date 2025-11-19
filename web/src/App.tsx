@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Button } from '@/components/ui/button';
 
 function App() {
   const [url, setUrl] = useState('https://api.clubmed.com/doc/swagger.json');
@@ -26,13 +27,9 @@ function App() {
             className="w-full rounded-md border border-slate-300 px-3 py-2 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-500"
             placeholder="https://example.com/openapi.json"
           />
-          <button
-            type="button"
-            className="mt-2 inline-flex items-center justify-center rounded-md bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-800"
-            onClick={() => alert(`Spec URL capture only: ${url}`)}
-          >
+          <Button type="button" onClick={() => alert(`Spec URL capture only: ${url}`)}>
             Generate tools (placeholder)
-          </button>
+          </Button>
         </section>
 
         <section className="rounded-xl border border-dashed border-slate-300 bg-white/60 p-5 text-center text-slate-500">
@@ -44,4 +41,3 @@ function App() {
 }
 
 export default App;
-
